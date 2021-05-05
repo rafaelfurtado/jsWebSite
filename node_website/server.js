@@ -18,9 +18,9 @@ app.use('/', (req, res) => {
     res.sendFile(path.join(__dirname+'/node-example-website/express/index.html'));
 });
 
-const port = 3000;
+const port = 8000;
 app.listen(port);
 
-const server = https.createServer(options, app);
+https.createServer(options, app).listen(8080);
 
 console.debug('Server inicializado na porta ' + port);
